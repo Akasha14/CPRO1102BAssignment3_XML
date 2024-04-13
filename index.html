@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>XML Import</title>
+        
+        <!-- Themeroller used for css -->
+        <link rel="stylesheet" href="themes/blueTheme.min.css" />
+        <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+
+        <!-- jQuery Version, UI, JS, and CSS -->
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+
+        <!-- My CSS -->
+        <link rel="stylesheet" href="xmlEX_CSS.css"/>
+    </head>
+
+    <body>
+        <!-- Main Page -->
+        <div class="pg" data-role="page" id="games">
+
+            <header data-role="header">
+
+                <h1 style="padding-top: 20px; font-size: xx-large; text-align: center;">
+                    Movie Info
+                </h1>
+
+            </header>
+
+            <section class="ui-content" role="main">
+
+                <h2 class="xmlTitle">Imported From <u>movies.xml</u> File</h2>
+
+                <!-- Display .json data here. -->
+                <p class="mainXMLText"></p>
+                
+            </section>
+            <footer data-role="footer"><h4>&copy; 2024</h4></footer>
+        </div>
+
+        <script>
+
+            // Script to pull .xml data.
+            $(document).ready(function(){
+                $.get("movies.xml", function(data){
+                    $(".mainXMLText").html(""); 
+                    $(data).find("movie").each(function(){ 
+                        var xmlDoc = $(this);
+                        $(".mainXMLText").append("<h3>" +
+                        xmlDoc.find("title").text() + "</h3>" + "<strong>" + "Genre: " + "</strong>" +
+                        xmlDoc.find("genre").text() + "<br>" + "<strong>" + "Director: " + "</strong>" +
+                        xmlDoc.find("director").text() + "<br>" + "<strong>" + "Duration: " + "</strong>" +
+                        xmlDoc.find("duration").text() + "<br>" + "<strong>" + "Release Date: " + "</strong>" +
+                        xmlDoc.find("releasedate").text() + "<br>" + "<br>");
+                    });
+                });
+            });
+
+        </script>
+    </body>
+</html>

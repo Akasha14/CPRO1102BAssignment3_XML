@@ -1,0 +1,36 @@
+<moviestorage>
+
+    <movie>
+        <title>John Wick</title>
+        <genre>Action</genre>
+        <director>Chad Stahelski</director>
+        <duration>1h 41m</duration>
+        <releasedate>October 24, 2014</releasedate>
+    </movie>
+
+    <movie>
+        <title>Shrek</title>
+        <genre>Comedy</genre>
+        <director>Vicky Jenson</director>
+        <duration>1h 29m</duration>
+        <releasedate>April 22, 2001</releasedate>
+    </movie>
+
+    <movie>
+        <title>Die Hard</title>
+        <genre>Action</genre>
+        <director>John McTiernan</director>
+        <duration>2h 11m</duration>
+        <releasedate>July 22, 1988</releasedate>
+    </movie>
+
+    <movie>
+        <title>Step Brothers</title>
+        <genre>Comedy</genre>
+        <director>Adam McKay</director>
+        <duration>1h 35m</duration>
+        <releasedate>July 25, 2008</releasedate>
+    </movie>
+
+    
+</moviestorage>
