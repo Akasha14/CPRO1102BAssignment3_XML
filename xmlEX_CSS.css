@@ -12,6 +12,7 @@
 }
 
 .mainXMLText {
+	text-align: center;
 	border: 10px groove black;
 	padding: 10px;
 	background-color: #fefeff;
